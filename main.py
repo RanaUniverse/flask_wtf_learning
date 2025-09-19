@@ -1,8 +1,11 @@
-from flask import Flask, render_template_string
+from flask import (
+    Flask,
+    render_template,
+)
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def home():
-    return render_template_string("<h1>This is Home Page</h1>")
+    return render_template("index.html")

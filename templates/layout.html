@@ -45,14 +45,28 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search" action="/search">
-                    <input class="form-control me-2" type="search" placeholder="Search Product Name" aria-label="Search" name="q"/>
+                    <input class="form-control me-2" type="search" placeholder="Search Product Name" aria-label="Search"
+                        name="q" />
                     <button class="btn btn-outline-info" type="submit">Search Here</button>
                 </form>
             </div>
         </div>
     </nav>
 
-    <h1>This is a Basic HTML File.</h1>
+    <h1 class="bg-success text-white p-3 rounded-end-pill shadow-lg border-danger w-75 mx-auto">This Text Came From the
+        Layout.html file.</h1>
+
+
+
+    {% block content %}
+    {# Here i will use to add content here in the other place #}
+    {% endblock content %}
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
