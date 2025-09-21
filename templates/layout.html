@@ -16,55 +16,21 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Rana Universe</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="btn btn-outline-info dropdown-toggle text-wrap" type="button"
-                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
-                                Check Product Categories
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Mobile Phones</a></li>
-                                <li><a class="dropdown-item" href="#">Laptop & Computers</a></li>
-                                <li><a class="dropdown-item" href="#">Books & Pens & Educational</a></li>
-                                <li><a href="#" class="dropdown-item">Some Extra Items</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search" action="/search">
-                    <input class="form-control me-2" type="search" placeholder="Search Product Name" aria-label="Search"
-                        name="q" />
-                    <button class="btn btn-outline-info" type="submit">Search Here</button>
-                </form>
-            </div>
-        </div>
-    </nav>
 
-    <h1 class="bg-success text-white p-3 rounded-end-pill shadow-lg border-danger w-75 mx-auto">This Text Came From the
-        Layout.html file.</h1>
+    {% include 'partials/navbar.html' %}
 
+    {# I make this for staying in permanent for any other html extends form this. #}
+
+    <h1 class="bg-success text-white p-3 rounded-end-pill shadow-lg border-danger w-75 mx-auto py-3 my-3">
+        This Text Came From the Layout.html file.
+    </h1>
 
 
     {% block content %}
-    {# Here i will use to add content here in the other place #}
     {% endblock content %}
 
 
-
-
+    {% include 'partials/footer.html' %}
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
