@@ -1,3 +1,5 @@
+{% from 'macros.html' import category_dropdown %}
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-sm-3">
     <div class="container">
         <a class="navbar-brand" href="#">Rana Universe</a>
@@ -17,16 +19,9 @@
                             Check Product Categories
                         </button>
 
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('show_category_dropdown', item_category = 'phone') }}"
-                                    class="dropdown-item">Mobile Phones</a></li>
-                            <li><a href="{{ url_for('show_category_dropdown', item_category = 'laptop') }}"
-                                    class="dropdown-item">New Laptops</a></li>
-                            <li><a href="{{ url_for('show_category_dropdown', item_category = 'book') }}"
-                                    class="dropdown-item">Books & Notes</a></li>
-                            <li><a href="{{ url_for('show_category_dropdown', item_category = 'extra') }}"
-                                    class="dropdown-item">Extra Items</a></li>
-                        </ul>
+
+                        {{ category_dropdown(categories) }}
+
 
                     </div>
                 </li>

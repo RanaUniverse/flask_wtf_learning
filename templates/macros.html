@@ -1,0 +1,19 @@
+{# Here i will make the macros which will be used in my differnet places #}
+{# 1. I will use to make dropdown menu here. #}
+
+
+{# categories will be the list of category which is the dict of name , slug #}
+
+{% macro category_dropdown(categories) %}
+
+<ul class="dropdown-menu">
+    {% for category in categories %}
+    <li>
+        <a href="{{ url_for('show_category_dropdown', item_category = category.slug) }}" class="dropdown-item">
+            {{ category.name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endmacro %}
