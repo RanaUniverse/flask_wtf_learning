@@ -16,12 +16,18 @@
                             id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
                             Check Product Categories
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Mobile Phones</a></li>
-                            <li><a class="dropdown-item" href="#">Laptop & Computers</a></li>
-                            <li><a class="dropdown-item" href="#">Books & Pens & Educational</a></li>
-                            <li><a href="#" class="dropdown-item">Some Extra Items</a></li>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url_for('show_category_dropdown', item_category = 'phone') }}"
+                                    class="dropdown-item">Mobile Phones</a></li>
+                            <li><a href="{{ url_for('show_category_dropdown', item_category = 'laptop') }}"
+                                    class="dropdown-item">New Laptops</a></li>
+                            <li><a href="{{ url_for('show_category_dropdown', item_category = 'book') }}"
+                                    class="dropdown-item">Books & Notes</a></li>
+                            <li><a href="{{ url_for('show_category_dropdown', item_category = 'extra') }}"
+                                    class="dropdown-item">Extra Items</a></li>
                         </ul>
+
                     </div>
                 </li>
             </ul>
