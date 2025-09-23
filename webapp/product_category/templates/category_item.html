@@ -1,0 +1,27 @@
+{# Here i will keep the new part of showsing some category name #}
+
+{% extends 'layout.html' %}
+
+{% block title_name %}
+{{ product_name }}
+{% endblock title_name %} -Automatic
+
+
+
+{% block content %}
+
+<div class="container w-50">
+    <div class="text-center">
+        <div class="border border-3 border-info p-3 rounded">
+            This is The main content for
+            <br>
+            <span class="text-primary fs-4 fw-bold">
+                {{ product_name }}
+            </span>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

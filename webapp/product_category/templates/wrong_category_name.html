@@ -1,0 +1,26 @@
+{# Here i will keep the new part of showsing some category name #}
+
+{% extends 'layout.html' %}
+
+{% block title_name %}
+Wrong Category Selected
+{% endblock title_name %} -Automatic
+
+
+
+{% block content %}
+
+<div class="container fs-1 fw-bold text-center ">
+    404 Error
+</div>
+
+<div class="container w-50 text-center text-danger">
+    You Have Entered A Wrong Name:
+    <br>
+    <span class="text-primary">
+        {{ wrong_name }}
+    </span>
+</div>
+
+
+{% endblock content %}
